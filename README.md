@@ -142,20 +142,18 @@ In this project, there was 1 junior developer from Codecool: Toma Tamás
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/CodecoolGlobal/react-for-a-cause-react-esicsordas?style=for-the-badge
-[contributors-url]: https://github.com/CodecoolGlobal/react-for-a-cause-react-esicsordas/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/CodecoolGlobal/react-for-a-cause-react-esicsordas?style=for-the-badge
-[forks-url]: https://github.com/CodecoolGlobal/react-for-a-cause-react-esicsordas/forks
-[stars-shield]: https://img.shields.io/github/stars/CodecoolGlobal/react-for-a-cause-react-esicsordas?style=for-the-badge
-[stars-url]: https://github.com/CodecoolGlobal/react-for-a-cause-react-esicsordas/stargazers
-[issues-shield]: https://img.shields.io/github/issues/CodecoolGlobal/react-for-a-cause-react-esicsordas?style=for-the-badge
-[issues-url]: https://github.com/CodecoolGlobal/react-for-a-cause-react-esicsordas/issues
+[contributors-shield]: https://img.shields.io/github/contributors/tomatams/carbonFootPrintCalculator?style=for-the-badge
+[contributors-url]: https://github.com/tomatams/carbonFootPrintCalculator/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/tomatams/carbonFootPrintCalculator?style=for-the-badge
+[forks-url]: https://github.com/tomatams/carbonFootPrintCalculator/forks
+[stars-shield]: https://img.shields.io/github/stars/tomatams/carbonFootPrintCalculator?style=for-the-badge
+[stars-url]: https://github.com/tomatams/carbonFootPrintCalculator/stargazers
+[issues-shield]: https://img.shields.io/github/issues/tomatams/carbonFootPrintCalculator?style=for-the-badge
+[issues-url]: https://github.com/tomatams/carbonFootPrintCalculator/issues
 
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/linkedin_username
-[LinkedIn - Emese]: https://www.linkedin.com/in/emese-csordas-854553181/
 [LinkedIn - Tamás]: https://www.linkedin.com/in/tomatams/
-[LinkedIn - László]: https://www.linkedin.com/in/l%C3%A1szl%C3%B3-p%C3%A9terfi/
 [JavaScript.img]: 	https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E
 [JavaScript-url]: https://www.javascript.com/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
