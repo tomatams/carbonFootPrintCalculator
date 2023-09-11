@@ -4,13 +4,17 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from './Pages/Layout';
+import FootprintForm from './Components/Form/FootprintForm';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
     children: [
-      
+      {
+        path: "/determine",
+        element: <FootprintForm />
+      }
     ]
   }
 ])
