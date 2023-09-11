@@ -11,7 +11,7 @@
 <h3 align="center"> :mountain:  Carbon Footprint Calculator  :mountain: </h3>
 <br>
   <p align="center">
-    Calculate you carbon footprint and learn to live a better life
+    Calculate your carbon footprint and learn to live a better life
     <br>
     <br>
     <a href="https://github.com/tomatams/carbonFootPrintCalculator"><strong>Explore the docs :arrow_right: </strong></a>
