@@ -4,7 +4,6 @@ import com.codecool.SpringcarbonFootprint.model.Answer;
 import com.codecool.SpringcarbonFootprint.model.NewAnswerDTO;
 import com.codecool.SpringcarbonFootprint.model.NewQuestionDTO;
 import com.codecool.SpringcarbonFootprint.model.Question;
-import com.codecool.SpringcarbonFootprint.repository.AnswerRepository;
 import com.codecool.SpringcarbonFootprint.repository.QuestionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,21 +15,23 @@ import java.util.UUID;
 public class QuestionService {
 
     private final QuestionRepository questionRepository;
-    private final AnswerRepository answerRepository;
     @Autowired
-    public QuestionService(QuestionRepository questionRepository, AnswerRepository answerRepository) {
+    public QuestionService(QuestionRepository questionRepository) {
         this.questionRepository = questionRepository;
-        this.answerRepository = answerRepository;
     }
 
     public Question addQuestion(NewQuestionDTO newQuestionDTO) throws InvalidQuestionException {
         List<Answer> answerList = getAnswerList(newQuestionDTO);
         Question newQuestion = questionBuilder(newQuestionDTO, answerList);
+        addQuestionToAnswers(answerList, newQuestion);
+        questionRepository.saveAndFlush(newQuestion);
+        return newQuestion;
+    }
+
+    private static void addQuestionToAnswers(List<Answer> answerList, Question newQuestion) {
         for (Answer answer : answerList) {
             answer.setQuestion(newQuestion);
         }
-        questionRepository.saveAndFlush(newQuestion);
-        return newQuestion;
     }
 
     private List<Answer> getAnswerList(NewQuestionDTO newQuestionDTO) {
