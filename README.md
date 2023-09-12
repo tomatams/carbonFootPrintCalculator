@@ -20,10 +20,6 @@
 
 <br>
 
-2023.09.08 project demo: <a href="https://prezi.com/p/tdys_otbbgqf/aws/?present=1">View Demo in Prezi :computer:</a> <a href="https://youtu.be/yfKmDrvlJlU">View Demo on Youtube :film_strip:</a>
-<br>
-This Demo is about Amazon Web Services
-
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -32,6 +28,7 @@ This Demo is about Amazon Web Services
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
+        <li><a href="#demos">Demos</a></li>
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
@@ -59,20 +56,37 @@ This project is centered around carbon footprint calculating. I learned to use c
 
 <br />
 <br />
-The project is under preparation.
+The project is under development.
 <br />
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
+<div id="demos"></div>
+
+### Demos
+
+2023.09.08 project demo: This Demo is about Amazon Web Services, what is it, why and how it works.
+<br>
+* View the Prezi of the Demo  [![Prezi][Prezi.js]][Prezi-url]
+* View Demo on Youtube  [![Youtube][Youtube.js]][Youtube-url]
+<br>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 <div id="built-with"></div>
 
 ### Built With
 
 
+* [![Amazon][Amazon.js]][Amazon-url]
+* [![Spring][Spring.js]][Spring-url]
+* [![Java][Java.js]][Java-url]
 * [![JavaScript][JavaScript.img]][JavaScript-url]
 
 * [![React][React.js]][React-url]
+  
 
+
+  
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
@@ -158,3 +172,14 @@ In this project, there was 1 junior developer from Codecool: Toma Tamás
 [JavaScript-url]: https://www.javascript.com/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
+
+[Prezi.js]: https://img.shields.io/badge/Prezi-3181FF?style=for-the-badge&logo=prezi&logoColor=white
+[Prezi-url]:https://prezi.com/p/tdys_otbbgqf/aws/?present=1
+[Youtube.js]: https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white
+[Youtube-url]: https://youtu.be/yfKmDrvlJlU
+[Amazon.js]: https://img.shields.io/badge/Amazon_AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white
+[Amazon-url]: https://aws.amazon.com
+[Spring.js]: https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white
+[Spring-url]: https://spring.io
+[Java.js]:https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white
+[Java-url]: https://www.java.com/en/
