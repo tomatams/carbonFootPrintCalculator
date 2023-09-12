@@ -1,5 +1,6 @@
 package com.codecool.SpringcarbonFootprint.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -11,6 +12,7 @@ import java.util.UUID;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
+@Table(name="Answers")
 public class Answer {
 
     @Id
@@ -20,7 +22,8 @@ public class Answer {
     private String answer;
 
     @ManyToOne
+    @JoinColumn(name = "question_id")
+    @JsonBackReference
     private Question question;
-
 
 }
