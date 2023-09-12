@@ -4,7 +4,8 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from './Pages/Layout';
-import FootprintForm from './Components/Form/FootprintForm';
+import AdminPage from './Pages/AdminPage';
+import CarbonFootPrintFormPage from './Pages/CarbonFootPrintFormPage';
 
 const router = createBrowserRouter([
   {
@@ -13,7 +14,11 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/determine",
-        element: <FootprintForm />
+        element: <CarbonFootPrintFormPage />
+      },
+      {
+        path: "/admin",
+        element: <AdminPage />
       }
     ]
   }

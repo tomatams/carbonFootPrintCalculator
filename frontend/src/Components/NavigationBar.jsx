@@ -11,6 +11,9 @@ const NavigationBar = ({ active, handleClick }) => {
           <Link to="/determine">My carbon footprint</Link>
         </li>
         <li>
+          <Link to="/admin">Admin</Link>
+        </li>
+        <li>
           <a href="#">Contact</a>
         </li>
       </div>
