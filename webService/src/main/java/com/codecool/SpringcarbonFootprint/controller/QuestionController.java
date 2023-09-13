@@ -14,13 +14,10 @@ import java.util.UUID;
 @RestController
 @RequestMapping("/questions")
 public class QuestionController {
-
     private final QuestionService questionService;
-
     public QuestionController(QuestionService questionService) {
         this.questionService = questionService;
     }
-
     @GetMapping(value = "/all")
     public List<Question> getQuestions(){
         return questionService.getAllQuestions();
@@ -41,5 +38,10 @@ public class QuestionController {
         } catch (InvalidQuestionException e) {
             return ResponseEntity.badRequest().build();
         }
+    }
+
+    @DeleteMapping(value = "/delete/{id}")
+    public void deleteRecipeByID(@PathVariable("id") UUID id) {
+        questionService.deleteQuestionByID(id);
     }
 }

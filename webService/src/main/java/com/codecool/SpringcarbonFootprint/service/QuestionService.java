@@ -62,4 +62,8 @@ public class QuestionService {
     public Question getQuestionByID(UUID id) {
         return questionRepository.getQuestionsById(id);
     }
+
+    public void deleteQuestionByID(UUID id) {
+        questionRepository.deleteById(id);
+    }
 }
