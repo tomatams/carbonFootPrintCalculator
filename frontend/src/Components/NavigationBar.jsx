@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import "./NavigationBar.css";
 
 
 const NavigationBar = ({ active, handleClick }) => {
@@ -7,6 +8,9 @@ const NavigationBar = ({ active, handleClick }) => {
     <nav>
       <div className={`navigation ${active}`} onClick={handleClick}>
         <span className={`toggle-menu ${active}`} onClick={handleClick}></span>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
         <li>
           <Link to="/determine">My carbon footprint</Link>
         </li>
