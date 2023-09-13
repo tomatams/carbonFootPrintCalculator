@@ -1,6 +1,20 @@
+import { useNavigate } from "react-router-dom";
 import "./QuestionsAndAnswers.css";
 
 const QuestionsAndAnswers = ({questionData}) => {
+    const navigate = useNavigate();
+
+    function onDelete (id) {
+      deleteQuestion(id)
+      .then(() => {
+        navigate("/admin")
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+
+    }
+
     return (
         <div className="qna-table">
           {questionData.map((qa) => (
@@ -15,12 +29,21 @@ const QuestionsAndAnswers = ({questionData}) => {
               </div>
               <div>
                 <button className="qna-cell-buttons" >Update</button>
-                <button className="qna-cell-buttons" >Delete</button>
+                <button onClick={() => onDelete(qa.id)} className="qna-cell-buttons" >Delete</button>
               </div>
             </div>
           ))}
         </div>
       );
     };
+
+  const deleteQuestion = (id) => {
+    return fetch(`/questions/delete/${id}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+  }
 
 export default QuestionsAndAnswers;
