@@ -8,6 +8,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.NoSuchElementException;
+import java.util.UUID;
 
 @RestController
 @RequestMapping("/questions")
@@ -22,6 +24,15 @@ public class QuestionController {
     @GetMapping(value = "/all")
     public List<Question> getQuestions(){
         return questionService.getAllQuestions();
+    }
+
+    @GetMapping(value = "{id}")
+    public ResponseEntity<Question> getRecipeByID(@PathVariable("id") UUID id) {
+        try {
+            return ResponseEntity.ok(questionService.getQuestionByID(id));
+        } catch (NoSuchElementException e) {
+            return ResponseEntity.notFound().build();
+        }
     }
     @PostMapping(value = "/add")
     public ResponseEntity<Question> postQuestion (@RequestBody NewQuestionDTO newQuestionDTO) {

@@ -58,4 +58,8 @@ public class QuestionService {
     public List<Question> getAllQuestions() {
         return questionRepository.findAll();
     }
+
+    public Question getQuestionByID(UUID id) {
+        return questionRepository.getQuestionsById(id);
+    }
 }
