@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from './Pages/Layout';
 import AdminPage from './Pages/AdminPage';
 import CarbonFootPrintFormPage from './Pages/CarbonFootPrintFormPage';
+import QuestionForm from './Components/Admin/QA/QuestionForm';
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
       {
         path: "/admin",
         element: <AdminPage />
+      },
+      {
+        path: "/QuestionForm",
+        element: <QuestionForm />
       }
     ]
   }
