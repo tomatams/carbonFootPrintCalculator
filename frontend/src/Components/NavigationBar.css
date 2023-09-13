@@ -12,6 +12,7 @@
 
 li{
     list-style-type: none;
+    flex-wrap: nowrap;
 }
 
 .navigation li a {
@@ -22,7 +23,7 @@ li{
     letter-spacing: 0.12rem;
     padding-top: 5px;
     padding-right: 25px;
-    padding-left: 80px;
+    padding-left: 25px;
     border-radius: 20px;
     transition: 0.5s;
   }
