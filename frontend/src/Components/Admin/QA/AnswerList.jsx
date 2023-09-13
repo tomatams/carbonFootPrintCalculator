@@ -1,8 +1,8 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import AddedAnswer from "./AddedAnswer";
 import AnswerForm from "./AnswerForm";
 
-const AnswerList = () => {
+const AnswerList = ({addAnswers}) => {
     const [answers, setAnswers] = useState([]);
     const [oneAnswer, setOneAnswer] = useState("");
 
@@ -10,6 +10,10 @@ const AnswerList = () => {
         const newAnswers = [...answers, {answer: answer}];
         setAnswers(newAnswers);
     }
+
+    useEffect(() => {
+        addAnswers(answers);
+    }, [answers, addAnswers])
 
     return (
         <div>

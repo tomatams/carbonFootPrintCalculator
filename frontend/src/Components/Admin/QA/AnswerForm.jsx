@@ -3,6 +3,7 @@ const AnswerForm = ({answer, setAnswer, pushAnswer}) => {
     const handleAnswer = () => {
         if(!answer) return;
         pushAnswer(answer);
+        setAnswer("");
     }
 
     return (
