@@ -9,5 +9,4 @@ public class SpringCarbonFootprintApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SpringCarbonFootprintApplication.class, args);
 	}
-
 }
