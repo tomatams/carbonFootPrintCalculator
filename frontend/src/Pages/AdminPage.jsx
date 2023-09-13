@@ -20,7 +20,7 @@ const AdminPage = () => {
     } else {   
         return (
             <div>
-                <Link to="/addNewQuestion">
+                <Link to="/QuestionForm">
                     <SimpleButton buttonTitle = {"Add a new Question"}/>
                 </Link>
                 <QuestionsAndAnswers questionData={questionList}/>
