@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import QuestionsAndAnswers from "../Components/Admin/QA/QuestionsAndAnswers";
-import SimpleButton from "../Components/Buttons/SimpleButton";
+import "./AdminPage.css";
 
 const AdminPage = () => {
     const [questionList, setQuestionList] = useState(null);
@@ -21,7 +21,7 @@ const AdminPage = () => {
         return (
             <div>
                 <Link to="/QuestionForm">
-                    <SimpleButton buttonTitle = {"Add a new Question"}/>
+                    <button className="admin-newQ-button">Add a new Question</button>
                 </Link>
                 <QuestionsAndAnswers questionData={questionList}/>
             </div>
