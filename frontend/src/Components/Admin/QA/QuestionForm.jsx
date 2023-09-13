@@ -26,7 +26,7 @@ const QuestionForm = () => {
         setLoading(true);
         await addQuestion(question)
         .then(() => {
-            navigate("/");
+            navigate("/admin");
         })
         .catch((err) => {
           throw (err);
