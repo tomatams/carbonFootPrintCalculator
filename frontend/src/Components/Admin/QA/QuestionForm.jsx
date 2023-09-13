@@ -36,7 +36,6 @@ const QuestionForm = () => {
         })
     }
 
-
     return (
         <form onSubmit = {e => onSubmit(e)}>
 
@@ -51,7 +50,7 @@ const QuestionForm = () => {
             <AnswerList id = "answerList" name ="answerList" addAnswers={setAnswerList}/>
             
             <div >
-                <button type="submit" >Create recipe</button>
+                <button type="submit" >Create Question</button>
                 <button onClick={() => navigate("/")}>Cancel</button>
             </div>
         </form>
