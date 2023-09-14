@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./NavigationBar.css";
 
@@ -12,14 +11,14 @@ const NavigationBar = ({ active, handleClick }) => {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/determine">My carbon footprint</Link>
+          <Link to="/createForm">My carbon footprint</Link>
         </li>
         <li>
           <Link to="/admin">Admin</Link>
         </li>
-        <li>
+        {/* <li>
           <a href="#">Contact</a>
-        </li>
+        </li> //TODO */}
       </div>
     </nav>
   )

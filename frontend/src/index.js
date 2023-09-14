@@ -5,7 +5,7 @@ import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from './Pages/Layout';
 import AdminPage from './Pages/AdminPage';
-import CarbonFootPrintFormPage from './Pages/CarbonFootPrintFormPage';
+import CarbonFootPrintCalcPage from './Pages/CarbonFootPrintCalcPage';
 import QuestionForm from './Components/Admin/QA/QuestionForm';
 
 const router = createBrowserRouter([
@@ -14,8 +14,8 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [
       {
-        path: "/determine",
-        element: <CarbonFootPrintFormPage />
+        path: "/createForm",
+        element: <CarbonFootPrintCalcPage />
       },
       {
         path: "/admin",
