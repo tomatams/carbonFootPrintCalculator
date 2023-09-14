@@ -1,11 +1,3 @@
-.fpf-container-answer{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-}
-
 .fpf-question{
     display: flex;
     flex-direction: row;
@@ -14,68 +6,37 @@
     align-items: center;
 }
 
-.fpf-answer-button{
+.fpf-container-answer {
     display: flex;
-    justify-content: center;
-    background-color: initial;
-    background-image: linear-gradient(-180deg, #31ff3f, #03e6a6);
-    border-radius: 6px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
-    cursor: pointer;
-    width: 100%;
+    flex-direction: column;
+    align-items: center;
 }
 
-.moveButton button {
+.fpf-answer-button {
+    background-image: linear-gradient(-180deg, #14e140, #0d891e);
+    width: 70%;
+    text-align: center;
+}
+
+button {
     background-color: initial;
-    background-image: linear-gradient(-180deg, #FF7E31, #E62C03);
     border-radius: 6px;
     box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
     color: #FFFFFF;
     cursor: pointer;
     display: inline-block;
     font-family: Inter,-apple-system,system-ui,Roboto,"Helvetica Neue",Arial,sans-serif;
-    height: 20px;
+    height: 30px;
     line-height: 20px;
     outline: 0;
     overflow: hidden;
     padding: 0 20px;
     pointer-events: auto;
-    position: relative;
-    text-align: center;
     touch-action: manipulation;
     user-select: none;
     -webkit-user-select: none;
     vertical-align: top;
     white-space: nowrap;
-    width: 50%;
-    z-index: 9;
-    border: 0;
-    transition: box-shadow .2s;
-}
-
-.submitButton button {
-    background-color: initial;
-    background-image: linear-gradient(-180deg, #6b31ff, #035ae6);
-    border-radius: 6px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
-    color: #FFFFFF;
-    cursor: pointer;
-    display: inline-block;
-    font-family: Inter,-apple-system,system-ui,Roboto,"Helvetica Neue",Arial,sans-serif;
-    height: 20px;
-    line-height: 20px;
-    outline: 0;
-    overflow: hidden;
-    padding: 0 20px;
-    pointer-events: auto;
-    position: relative;
-    text-align: center;
-    touch-action: manipulation;
-    user-select: none;
-    -webkit-user-select: none;
-    vertical-align: top;
-    white-space: nowrap;
-    width: 100%;
     z-index: 9;
     border: 0;
     transition: box-shadow .2s;
@@ -83,5 +44,17 @@
   
 button:hover {
     box-shadow: rgba(253, 76, 0, 0.5) 0 3px 8px;
-  }
-  
+}
+
+
+.fpf-move-button {
+    background-image: linear-gradient(-180deg, #FF7E31, #E62C03);
+    width: 100%;
+    text-align: center;
+}
+
+.fpf-submit-button {
+    background-image: linear-gradient(-180deg, #6b31ff, #035ae6);
+    width: 100%;
+    text-align: center;
+}
