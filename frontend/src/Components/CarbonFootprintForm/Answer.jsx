@@ -1,6 +1,9 @@
-const Answer = ({answer}) => {
+const Answer = ({answer, onChose}) => {
+
     return (
-        <p>{answer}</p>
+        <div >
+            <button className="fpf-answer-button"onClick={()=>onChose(answer.id)}>{answer.answer}</button>
+        </div>
     )
 }
 
