@@ -1,0 +1,34 @@
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+
+}
+
+.navigation.active {
+    width: 50vw;
+}
+
+li{
+    list-style-type: none;
+    flex-wrap: nowrap;
+}
+
+.navigation li a {
+    list-style-type: none;
+    text-decoration: none;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 0.12rem;
+    padding-top: 5px;
+    padding-right: 25px;
+    padding-left: 25px;
+    border-radius: 20px;
+    transition: 0.5s;
+  }
+
+.navigation li a:hover {
+    background-color: #94a1c5;
+    color: #fff;
+  }
