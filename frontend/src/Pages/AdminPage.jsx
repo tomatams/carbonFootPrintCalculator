@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import backendRoutes from "../api/backendRoutes";
 import FetchQuestionData from "../api/useFetchQuestion";
 import QuestionsAndAnswers from "../Components/Admin/QA/QuestionsAndAnswers";
 import "./AdminPage.css";
