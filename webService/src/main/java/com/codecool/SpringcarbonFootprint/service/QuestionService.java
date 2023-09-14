@@ -1,9 +1,6 @@
 package com.codecool.SpringcarbonFootprint.service;
 
-import com.codecool.SpringcarbonFootprint.model.Answer;
-import com.codecool.SpringcarbonFootprint.model.NewAnswerDTO;
-import com.codecool.SpringcarbonFootprint.model.NewQuestionDTO;
-import com.codecool.SpringcarbonFootprint.model.Question;
+import com.codecool.SpringcarbonFootprint.model.*;
 import com.codecool.SpringcarbonFootprint.repository.QuestionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -21,7 +18,7 @@ public class QuestionService {
     }
 
     public Question addQuestion(NewQuestionDTO newQuestionDTO) throws InvalidQuestionException {
-        List<Answer> answerList = getAnswerList(newQuestionDTO);
+        List<Answer> answerList = getAnswerListForAddNewQuestion(newQuestionDTO);
         Question newQuestion = questionBuilder(newQuestionDTO, answerList);
         addQuestionToAnswers(answerList, newQuestion);
         questionRepository.saveAndFlush(newQuestion);
@@ -34,14 +31,13 @@ public class QuestionService {
         }
     }
 
-    private List<Answer> getAnswerList(NewQuestionDTO newQuestionDTO) {
+    private List<Answer> getAnswerListForAddNewQuestion(NewQuestionDTO newQuestionDTO) {
         return newQuestionDTO.answerList()
                 .stream()
-                .map(this::answerBuilder)
+                .map(this::answerBuilderForAddNewAnswer)
                 .toList();
     }
-
-    private Answer answerBuilder(NewAnswerDTO newAnswerDTO){
+    private Answer answerBuilderForAddNewAnswer(NewAnswerDTO newAnswerDTO){
         return Answer.builder()
                 .answer(newAnswerDTO.answer())
                 .build();
@@ -57,5 +53,21 @@ public class QuestionService {
 
     public List<Question> getAllQuestions() {
         return questionRepository.findAll();
+    }
+
+    public Question getQuestionByID(UUID id) throws NotFoundQuestionException {
+        return questionRepository.getQuestionsById(id);
+    }
+
+    public void deleteQuestionByID(UUID id) {
+        questionRepository.deleteById(id);
+    }
+
+    public Question updateQuestion(UpdateQuestionDTO updateQuestionDTO) throws NotFoundQuestionException {
+        Question oldQuestion = getQuestionByID(updateQuestionDTO.id());
+        oldQuestion.setQuestion(updateQuestionDTO.question());
+        questionRepository.save(oldQuestion);
+        //TODO update answerList
+        return oldQuestion;
     }
 }
