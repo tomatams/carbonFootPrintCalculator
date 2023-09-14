@@ -17,17 +17,7 @@ const FootprintForm = ({questionList}) => {
         if(questionNum >= 0 && questionNum < questionList.length - 1){
             setQuestionNum(questionNum + 1);
         }
-
-        const includesQuestionId = givenAnswers.some(obj => obj.question_id === question_id);
-        let chosenAnswers = [...givenAnswers];
-
-        if(!includesQuestionId) {
-            chosenAnswers = [...givenAnswers, {question_id: question_id, answer_id: answer_id}];
-            setGivenAnswers(chosenAnswers);
-        }
-
-        console.log(chosenAnswers);
-        console.log(includesQuestionId);
+        handleAnswersToSameQuestion(givenAnswers, question_id, answer_id);
     }
 
     return (
@@ -61,6 +51,21 @@ const FootprintForm = ({questionList}) => {
 
             </div>
     )
+
+    function handleAnswersToSameQuestion(givenAnswers, question_id, answer_id) {
+        const includesQuestionId = givenAnswers.some(obj => obj.question_id === question_id);
+        let chosenAnswers = [...givenAnswers];
+
+        if (!includesQuestionId) {
+            chosenAnswers = [...givenAnswers, { question_id: question_id, answer_id: answer_id }];
+            setGivenAnswers(chosenAnswers);
+        } else {
+            let filteredAnswers = chosenAnswers.filter(givenAnswers => givenAnswers.question_id !== question_id);
+            chosenAnswers = [...filteredAnswers, { question_id: question_id, answer_id: answer_id }];
+            setGivenAnswers(chosenAnswers);
+        }
+        return chosenAnswers;
+    }
 }
 
 export default FootprintForm;
