@@ -1,0 +1,516 @@
+[
+  {
+  "questions": [
+    {
+      "question": "How would you best describe your diet?",
+      "answerList": [
+        {
+          "answer": "meat in every meal"
+        },
+        {
+          "answer": "meat in some meals"
+        },
+        {
+          "answer": "no beef"
+        },
+        {
+          "answer": "meat very rarely"
+        },
+        {
+          "answer": "vegetarian"
+        },
+        {
+          "answer": "vegan"
+        }
+      ],
+      "topic": "food",
+      "hint": "",
+      "type": "simple"
+    },
+    {
+      "question": "In a week, how much do you spend on food from restaurants, canteens and takeaways?",
+      "answerList": [
+        {
+          "answer": "0$"
+        },
+        {
+          "answer": "1-10$"
+        },
+        {
+          "answer": "10-60$"
+        },
+        {
+          "answer": "more than 60$"
+        }
+      ],
+      "topic": "food",
+      "hint": "",
+      "type": "simple"
+
+    },
+    {
+      "question": "Of the food you buy how much is wasted and thrown away?",
+      "answerList": [
+        {
+          "answer": "none"
+        },
+        {
+          "answer": "0-10 %"
+        },
+        {
+          "answer": "10-30%"
+        },
+        {
+          "answer": "more than 30%"
+        }
+      ],
+      "topic": "food",
+      "hint": "",
+      "type": "simple"
+
+    },
+    {
+      "question": "How often do you buy locally produced food that is not imported to the UK?",
+      "answerList": [
+        {
+          "answer": "a lot of food I buy is locally sourced"
+        },
+        {
+          "answer": "some of the food I buy is locally sourced"
+        },
+        {
+          "answer": "I dont worry about where my food comes from"
+        }
+      ],
+      "topic": "food",
+      "hint": "",
+      "type": "simple"
+    },
+    {
+      "question": "What kind of vehicle do you travel in most often as a driver or passenger?",
+      "answerList": [
+        {
+          "answer": "car"
+        },
+        {
+          "answer": "motorbike"
+        },
+        {
+          "answer": "neither – I walk, I cycle or use public transport for all my journeys"
+        }
+      ],
+      "topic": "travel",
+      "hint": "This question is finding out about your private car/motorbike use — we’ll ask about public transport next. If you walk or cycle everywhere, just click ‘Neither’.",
+      "type": "simple"
+    },
+    {
+      "question": "How many hours a week do you spend on the train for personal use including commuting?",
+      "answerList": [
+        {
+          "answer": "i dont travel by train"
+        },
+        {
+          "answer": "under 2 hours"
+        },
+        {
+          "answer": "2-5 hours"
+        },
+        {
+          "answer": "5-15 hours"
+        },
+        {
+          "answer": "15-25 hours"
+        },
+        {
+          "answer": "over 25 hours"
+        }
+      ],
+      "topic": "travel",
+      "hint": "This should include your commute and any other train journeys you make, except business trips (they’re part of your employer’s footprint, not yours).",
+      "type": "simple"
+    },
+    {
+      "question": "How many hours a week do you spend on the bus for personal use including commuting?",
+      "answerList": [
+        {
+          "answer": "i dont travel by bus"
+        },
+        {
+          "answer": "under 1 hour"
+        },
+        {
+          "answer": "1-3 hours"
+        },
+        {
+          "answer": "3-6 hours"
+        },
+        {
+          "answer": "6-10 hours"
+        },
+        {
+          "answer": "over 10 hours"
+        }
+      ],
+      "topic": "travel",
+      "hint": "This should include your commute and any other bus journeys you make, except business trips (they’re part of your employer’s footprint, not yours).",
+      "type": "simple"
+    },
+    {
+      "question": "In the last year, how many return flights have you made in total to the following locations?",
+      "answerList":
+      [
+        {
+          "answer": "domestic (UK/Ireland)"
+        },
+        {
+          "answer": "To/From Europe"
+        },
+        {
+          "answer": "To From outside Europe"
+        }
+      ],
+      "topic": "travel",
+      "hint": "This should not include business trips (they’re part of your employer’s footprint, not yours). Leave blank if not applicable.",
+      "type": "input"
+    },
+    {
+      "question": "What percentage of your flights do you offset?",
+      "answerList": [
+        {
+          "answer": "none of them"
+        },
+        {
+          "answer": "25%"
+        },
+        {
+          "answer": "50%"
+        },
+        {
+          "answer": "75%"
+        },
+        {
+          "answer": "all of them"
+        },
+        {
+          "answer": "not applicable"
+        }
+      ],
+      "topic": "travel",
+      "hint": "",
+      "type": "simple"
+    },
+    {
+      "question": "What kind of house do you live in?",
+      "answerList": [
+        {
+          "answer": "detached"
+        },
+        {
+          "answer": "semi detached"
+        },
+        {
+          "answer": "terrace"
+        },
+        {
+          "answer": "flat"
+        }
+      ],
+      "topic": "home",
+      "hint": "",
+      "type": "simple"
+    },
+    {
+      "question": "How many bedrooms does your house have?",
+      "answerList": [
+        {
+          "answer": "1"
+        },
+        {
+          "answer": "2"
+        },
+        {
+          "answer": "3"
+        },
+        {
+          "answer": "4 or more"
+        }
+      ],
+      "topic": "home",
+      "hint": "",
+      "type": "simple"
+    },
+    {
+      "question": "How many people (aged 17 and over) live in your house?",
+      "answerList": [
+        {
+          "answer": "1"
+        },
+        {
+          "answer": "2"
+        },
+        {
+          "answer": "3"
+        },
+        {
+          "answer": "4"
+        },
+        {
+          "answer": "5 or more"
+        }
+      ],
+      "topic": "home",
+      "hint": "",
+      "type": "simple"
+    },
+    {
+      "question": "How do you heat your home?",
+      "answerList": [
+        {
+          "answer": "gas"
+        },
+        {
+          "answer": "oil"
+        },
+        {
+          "answer": "electricity"
+        },
+        {
+          "answer": "wood"
+        },
+        {
+          "answer": "heatpump"
+        }
+      ],
+      "topic": "home",
+      "hint": "Please indicate the primary fuel source that is used. Your energy bill will tell you this.",
+      "type": "simple"
+    },
+    {
+      "question": "Is your electricity on a green tariff?",
+      "answerList": [
+        {
+          "answer": "i dont know"
+        },
+        {
+          "answer": "no"
+        },
+        {
+          "answer": "yes but the tariff is less than 100% renewables"
+        },
+        {
+          "answer": "yes 100%"
+        }
+      ],
+      "topic": "home",
+      "hint": "Your tariff is the energy plan you’re on. If your electricity comes from renewable generation, it will be indicated on your bill.",
+      "type": "simple"
+    },
+    {
+      "question": "Do you regularly turn off lights and not leave your appliances on standby?",
+      "answerList": [
+        {
+          "answer": "yes"
+        },
+        {
+          "answer": "no"
+        }
+      ],
+      "topic": "home",
+      "hint": "",
+      "type": "simple"
+    },
+    {
+      "question": "How warm do you keep your home in winter?",
+      "answerList": [
+        {
+          "answer": "below 14C"
+        },
+        {
+          "answer": "14 – 17C"
+        },
+        {
+          "answer": "18-21C"
+        },
+        {
+          "answer": "over 21C"
+        }
+      ],
+      "topic": "home",
+      "hint": "",
+      "type": "simple"
+    },
+    {
+      "question": "Which of these home energy efficiency improvements are installed in your home?",
+      "answerList": [
+        {
+          "answer": "energy-saving lightbulbs"
+        },
+        {
+          "answer": "loft insulation"
+        },
+        {
+          "answer": "cavity or solid wall insulation"
+        },
+        {
+          "answer": "condensing boiler"
+        },
+        {
+          "answer": "double glazing"
+        },
+        {
+          "answer": "low flow fittings to taps and showers"
+        },
+        {
+          "answer": "solar panels"
+        },
+        {
+          "answer": "solar water heater"
+        }
+      ],
+      "topic": "home",
+      "hint": "Select all that apply or leave blank if not applicable.",
+      "type": "more"
+    },
+    {
+      "question": "In the last 12 months, have you bought any of these new household items?",
+      "answerList": [
+        {
+          "answer": "TV, laptop or PC"
+        },
+        {
+          "answer": "large item of furniture"
+        },
+        {
+          "answer": "washing machine, dishwasher, tumble dryer or fridge freezer"
+        },
+        {
+          "answer": "mobile phone or tablet"
+        }
+      ],
+      "topic": "home",
+      "hint": "Select all that apply or leave blank if not applicable. Don’t include any second-hand items, just those you bought new.",
+      "type": "more"
+    },
+    {
+      "question": "In a typical month, how much do you spend on clothes and footwear?",
+      "answerList": [
+        {
+          "answer": "0$"
+        },
+        {
+          "answer": "1-60$"
+        },
+        {
+          "answer": "60-180$"
+        },
+        {
+          "answer": "180$+"
+        }
+      ],
+      "topic": "home",
+      "hint": "Don’t include second-hand clothes, just those you bought new.",
+      "type": "simple"
+    },
+    {
+      "question": "In a typical month, how much do you spend on your pets and pet food?",
+      "answerList": [
+        {
+          "answer": "i dont have a pet"
+        },
+        {
+          "answer": "1-10$"
+        },
+        {
+          "answer": "10-35$"
+        },
+        {
+          "answer": "35$+"
+        }
+      ],
+      "topic": "home",
+      "hint": "This includes pet food, vet and grooming products, kennels, cages, litter, etc.",
+      "type": "simple"
+    },
+    {
+      "question": "In a typical month, how much do you spend on health, beauty, and grooming products?",
+      "answerList": [
+        {
+          "answer": "0-10$"
+        },
+        {
+          "answer": "10-60$"
+        },
+        {
+          "answer": "60$+"
+        }
+      ],
+      "topic": "home",
+      "hint": "This includes all bathroom products, plus other personal care costs such as haircuts, manicures, sunbeds, electric razors, hairdryers, and all personal hygiene products.",
+      "type": "simple"
+    },
+    {
+      "question": "In a typical month, how much do you spend on phone, internet, and TV contracts?",
+      "answerList": [
+        {
+          "answer": "0$"
+        },
+        {
+          "answer": "1-35$"
+        },
+        {
+          "answer": "35-70$"
+        },
+        {
+          "answer": "70$+"
+        }
+      ],
+      "topic": "home",
+      "hint": "These should be broken down on your bills.",
+      "type": "simple"
+    },
+    {
+      "question": "In a typical month, how much do you spend on entertainment and hobbies (sports/gym, cinema, books, newspapers, gardening, computer games)?",
+      "answerList": [
+        {
+          "answer": "0-25$"
+        },
+        {
+          "answer": "25-50$"
+        },
+        {
+          "answer": "50-75$"
+        },
+        {
+          "answer": "75$+"
+        }
+      ],
+      "topic": "home",
+      "hint": "",
+      "type": "simple"
+    },
+    {
+      "question": "Which of these types of waste do you recycle and/or compost?",
+      "answerList": [
+        {
+          "answer": "food"
+        },
+        {
+          "answer": "paper"
+        },
+        {
+          "answer": "tin cans"
+        },
+        {
+          "answer": "plastic"
+        },
+        {
+          "answer": "glass"
+        }
+      ],
+      "topic": "home",
+      "hint": "Select all that apply or leave blank if not applicable.",
+      "type": "more"
+    }
+  ]
+}
+]
