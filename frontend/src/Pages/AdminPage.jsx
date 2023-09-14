@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import backendRoutes from "../api/backendRoutes";
+import FetchQuestionData from "../api/useFetchQuestion";
 import QuestionsAndAnswers from "../Components/Admin/QA/QuestionsAndAnswers";
 import "./AdminPage.css";
 
@@ -8,7 +10,7 @@ const AdminPage = () => {
 
     useEffect(() => {
         async function fetchData() {
-            await fetchQuestionData()
+            await FetchQuestionData()
                 .then((json) => setQuestionList(json));;
           }
           fetchData();
@@ -27,21 +29,6 @@ const AdminPage = () => {
                 <QuestionsAndAnswers questionData={questionList}/>
             </div>
         )
-    }
-}
-
-async function fetchQuestionData() {
-    const url = "/questions/all";
-    try {
-        const response = await fetch(url);
-        if (!response.ok) {
-            throw new Error(`Fetch failed with status ${response.status}`);
-        }
-        const data = await response.json();
-        return data;
-    } catch (error) {
-        console.error("Error fetching data:", error);
-        return [];
     }
 }
 
