@@ -25,4 +25,9 @@ public class Question {
     @JsonManagedReference
     private List<Answer> answerList;
 
+    private String topic;
+    private String hint;
+
+    @Enumerated(EnumType.STRING)
+    private QuestionType questionType;
 }

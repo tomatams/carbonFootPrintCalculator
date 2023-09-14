@@ -48,6 +48,9 @@ public class QuestionService {
                 .id(UUID.randomUUID())
                 .question(newQuestionDTO.question())
                 .answerList(answerList)
+                .hint(newQuestionDTO.hint())
+                .topic(newQuestionDTO.topic())
+                .questionType(newQuestionDTO.type())
                 .build();
     }
 
