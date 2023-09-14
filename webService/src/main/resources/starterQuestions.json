@@ -1,6 +1,4 @@
 [
-  {
-  "questions": [
     {
       "question": "How would you best describe your diet?",
       "answerList": [
@@ -511,6 +509,4 @@
       "hint": "Select all that apply or leave blank if not applicable.",
       "type": "more"
     }
-  ]
-}
 ]
