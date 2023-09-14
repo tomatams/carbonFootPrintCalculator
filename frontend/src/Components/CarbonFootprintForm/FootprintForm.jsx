@@ -3,7 +3,7 @@ import Answer from "./Answer";
 import Question from "./Question";
 import "./FootprintForm.css";
 
-const FootprintForm = ({questionList}) => {
+const FootprintForm = ({questionList, onSubmit}) => {
     const [questionNum, setQuestionNum] = useState(0);
     const [givenAnswers, setGivenAnswers] = useState([]);
 
@@ -11,6 +11,7 @@ const FootprintForm = ({questionList}) => {
         if(questionNum >= 0 && questionNum < questionList.length - 1){
             setQuestionNum(questionNum + 1);
         }
+        onSubmit(givenAnswers);
     }
 
     function handleAnswerClick(question_id, answer_id){

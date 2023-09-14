@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import backendRoutes from "../api/backendRoutes";
 import FetchQuestionData from "../api/useFetchQuestion";
 import FootprintForm from "../Components/CarbonFootprintForm/FootprintForm";
 
 const CarbonFootPrintFormPage = () => {
+    const navigate = useNavigate();
     const [questionList, setQuestionList] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
 
@@ -15,6 +18,20 @@ const CarbonFootPrintFormPage = () => {
           fetchData();
       });
 
+      async function handleSubmit(data){
+        setIsLoading(true);
+        await postCompletedQuestions(data)
+        .then(() => {
+            navigate("/");
+        })
+        .catch((err) => {
+          throw (err);
+        })
+        .finally(() => {
+            setIsLoading(false);
+        })
+      }
+
       if(isLoading) {
         return (
             <p>No questions to answer or the questions are loading...</p>
@@ -22,10 +39,21 @@ const CarbonFootPrintFormPage = () => {
       } else {
           return (
               <div>
-                   <FootprintForm questionList = {questionList}></FootprintForm>
+                   <FootprintForm onSubmit = {handleSubmit}questionList = {questionList}></FootprintForm>
               </div>
           )
       }
 }
+
+const postCompletedQuestions = async (data) => {
+    const res = await fetch(backendRoutes.postCompletedQuestions, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data)
+    });
+    return await res.json();
+};
 
 export default CarbonFootPrintFormPage;
