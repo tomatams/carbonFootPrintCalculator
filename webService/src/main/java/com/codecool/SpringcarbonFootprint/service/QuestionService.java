@@ -5,6 +5,7 @@ import com.codecool.SpringcarbonFootprint.repository.QuestionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -72,5 +73,15 @@ public class QuestionService {
         questionRepository.save(oldQuestion);
         //TODO update answerList
         return oldQuestion;
+    }
+
+
+    public List<Question> addQuestions(List<NewQuestionDTO> questions) throws InvalidQuestionException {
+        List<Question> questionList = new ArrayList<>();
+        for (NewQuestionDTO question : questions) {
+            Question addedQuestion = addQuestion(question);
+            questionList.add(addedQuestion);
+        }
+        return questionList;
     }
 }
