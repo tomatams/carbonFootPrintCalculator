@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import backendRoutes from "../../../api/backendRoutes";
 import AnswerList from "./AnswerList";
 
 const QuestionForm = () => {
@@ -18,7 +19,6 @@ const QuestionForm = () => {
             return acc;
           }, {});
         question.answerList = answerList;
-        console.log(question)
         onSave(question);
     }
 
@@ -59,7 +59,7 @@ const QuestionForm = () => {
 
 
 const addQuestion = async (question) => {
-    const res = await fetch("/questions/add", {
+    const res = await fetch(backendRoutes.postOneQuestion, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
