@@ -28,7 +28,7 @@ const QuestionsAndAnswers = ({questionData}) => {
                 </ul>
               </div>
               <div>
-                <button className="qna-cell-buttons" >Update</button>
+                {/* //TO DO update questions --- <button className="qna-cell-buttons" >Update</button> */}
                 <button onClick={() => onDelete(qa.id)} className="qna-cell-buttons" >Delete</button>
               </div>
             </div>
