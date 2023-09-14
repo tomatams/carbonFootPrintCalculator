@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import backendRoutes from "../../../api/backendRoutes";
 import "./QuestionsAndAnswers.css";
 
 const QuestionsAndAnswers = ({questionData}) => {
@@ -38,7 +39,7 @@ const QuestionsAndAnswers = ({questionData}) => {
     };
 
   const deleteQuestion = (id) => {
-    return fetch(`/questions/delete/${id}`, {
+    return fetch(backendRoutes.deleteOneQuestion + `${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
