@@ -17,9 +17,17 @@ const FootprintForm = ({questionList}) => {
         if(questionNum >= 0 && questionNum < questionList.length - 1){
             setQuestionNum(questionNum + 1);
         }
-        const chosenAnswers = [...givenAnswers, {question_id: question_id, answer_id: answer_id}];
-        setGivenAnswers(chosenAnswers);
-        console.log(chosenAnswers)
+
+        const includesQuestionId = givenAnswers.some(obj => obj.question_id === question_id);
+        let chosenAnswers = [...givenAnswers];
+
+        if(!includesQuestionId) {
+            chosenAnswers = [...givenAnswers, {question_id: question_id, answer_id: answer_id}];
+            setGivenAnswers(chosenAnswers);
+        }
+
+        console.log(chosenAnswers);
+        console.log(includesQuestionId);
     }
 
     return (
@@ -33,20 +41,21 @@ const FootprintForm = ({questionList}) => {
                         key = {answer.id} 
                         index = {answer.id} 
                         answer= {answer}
-                        onChose={answer_id =>handleAnswerClick(questionList[questionNum].id, answer_id)}
+                        onChose={answer_id => handleAnswerClick(questionList[questionNum].id, answer_id)}
                         ></Answer>
                     ))}
                 </div>
 
                 <div>
-                  <div className = "moveButton">
+                  <div className = "fpf-move-button">
                     {questionNum > 0 && <button onClick={() => setQuestionNum(questionNum - 1)}>Previous</button>}
                     {questionNum < questionList.length-1 && <button onClick={() => setQuestionNum(questionNum + 1)}>Next</button>}
                   </div>
-                  <div className = "submitButton">
-                    {questionNum === questionList.length-1 && <button onClick={handleSubmitAnswer} type ="button">Submit the form about Carbon Footprint</button>}
+                  <div className = "fpf-submit-button">
+                    {questionNum === questionList.length-1 && <button onClick={handleSubmitAnswer} >Submit the form about Carbon Footprint</button>}
                   </div>
                 </div>
+
             </div>
     )
 }
