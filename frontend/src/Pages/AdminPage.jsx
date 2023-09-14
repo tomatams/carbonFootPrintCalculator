@@ -7,10 +7,11 @@ const AdminPage = () => {
     const [questionList, setQuestionList] = useState(null);
 
     useEffect(() => {
-        const url = "/questions/all";
-        fetch(url)
-          .then((res) => res.json())
-          .then((json) => setQuestionList(json));
+        async function fetchData() {
+            await fetchQuestionData()
+                .then((json) => setQuestionList(json));;
+          }
+          fetchData();
       });
 
     if(questionList === null){
@@ -26,6 +27,21 @@ const AdminPage = () => {
                 <QuestionsAndAnswers questionData={questionList}/>
             </div>
         )
+    }
+}
+
+async function fetchQuestionData() {
+    const url = "/questions/all";
+    try {
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error(`Fetch failed with status ${response.status}`);
+        }
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error("Error fetching data:", error);
+        return [];
     }
 }
 
