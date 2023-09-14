@@ -1,6 +1,8 @@
 const Question = ({question}) => {
     return (
-        <p>{question}</p>
+        <div className="fpf-question">
+            <p>{question}</p>
+        </div>
     )
 }
 
