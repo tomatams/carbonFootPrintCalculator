@@ -99,13 +99,45 @@ The project is under development.
 <div id="prerequisites"></div>
 
 ### Prerequisites
-The project is under preparation.
+The project is under develepment.
+
+1. JAVA 17
+2. MAVEN
+3. POSTGRES SQL
+4. IDE - for backend, for example INTELLIJ IDEA
 
 <div id="installation"></div>
 
 ### Installation
+1. Clone the repo
+   ```sh
+   git clone git@github.com:tomatams/carbonFootPrintCalculator.git
+   ```
+#### In PostgreSQL
+2. Create a database in PostgreSQL named :
+      ```sh
+   carbonFootprint
+   ```
+#### In IDE
+3. Open the project in IDE from the pom.xml file :open_file_folder:
+4. in backend/src/main/resources/application.properties file set the database name, username and password as environment variables as follows: <br>
+   :white_check_mark: DATABASE_NAME=_carbonFootprint_<br>
+   :white_check_mark: DATABASE_USERNAME=_your username_<br>
+   :white_check_mark: DATABASE_PASSWORD=_your password_<br>
+   
+##### Backend Side
+5. Run the application by the "Run" button in the top right corner or with Shift + F10 shortcut in INTELLIJ IDEA, or You can run a Spring Boot application from your IDE as a simple Java application (ElProyecteGrandeSprint1JavaTomatamsApplication.java),
+6. This will start the project backend side,
 
-you can't install it yet.
+
+#### In Terminal
+##### Frontend Side
+7.	Move into the project’s folder /frontend/,
+8.	Run the following command in the terminal :
+   ```sh
+   npm start
+   ```
+9.	This will start the project frontend side, and you can reach in your browser, on the following URL: _http://localhost:3000/_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -114,7 +146,12 @@ you can't install it yet.
 
 ## Usage
 
-In this project, you can calculate you carbon footprint. The application suggest you how you can decrease your carboon footprint.
+The project is under development, but is capable of these feature now:
+1. You can create and delete questions on admin site,
+2. You can watch the questions on adminside and on my carbon footprint side.
+
+The projects main goal is:
+You can calculate your carbon footprint. The application suggest you how you can decrease your carboon footprint.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
