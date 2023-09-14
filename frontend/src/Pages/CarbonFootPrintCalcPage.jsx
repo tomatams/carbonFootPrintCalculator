@@ -4,25 +4,28 @@ import FootprintForm from "../Components/CarbonFootprintForm/FootprintForm";
 
 const CarbonFootPrintFormPage = () => {
     const [questionList, setQuestionList] = useState(null);
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         async function fetchData() {
             await FetchQuestionData()
-                .then((json) => setQuestionList(json));;
+                .then((json) => setQuestionList(json))
+                .then(() => setIsLoading(false));
           }
           fetchData();
       });
 
-      function isLoaded(){
-        return questionList === null || questionList.length === 0;
-      }
-
+      if(isLoading) {
         return (
-            <div>
-                {isLoaded? <p>No questions to answer or the questions are loading...</p> : <FootprintForm questionList = {questionList}></FootprintForm>}
-            </div>
+            <p>No questions to answer or the questions are loading...</p>
         )
-    
+      } else {
+          return (
+              <div>
+                   <FootprintForm questionList = {questionList}></FootprintForm>
+              </div>
+          )
+      }
 }
 
 export default CarbonFootPrintFormPage;
