@@ -33,6 +33,9 @@ const FootprintForm = ({questionList}) => {
     return (
         <div>
                 <p>Fill out the Carbon Footprint Form!</p>
+                <div>
+                    <p>There is {questionList.length} questions to answer! You answered {questionNum + 1}</p>
+                </div>
 
                 <Question question={questionList[questionNum].question}></Question>
                 <div className="fpf-container-answer">
