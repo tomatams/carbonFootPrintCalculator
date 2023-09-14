@@ -13,15 +13,16 @@ const CarbonFootPrintFormPage = () => {
           fetchData();
       });
 
-    if(questionList === null){
+      function isLoaded(){
+        return questionList === null || questionList.length === 0;
+      }
+
         return (
-            <div>Loading...</div>
+            <div>
+                {isLoaded? <p>No questions to answer or the questions are loading...</p> : <FootprintForm questionList = {questionList}></FootprintForm>}
+            </div>
         )
-    } else {   
-        return (
-            <FootprintForm questionList = {questionList}></FootprintForm>
-        )
-    }
+    
 }
 
 export default CarbonFootPrintFormPage;

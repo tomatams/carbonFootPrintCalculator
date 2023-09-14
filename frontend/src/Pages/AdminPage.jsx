@@ -16,20 +16,20 @@ const AdminPage = () => {
           fetchData();
       });
 
-    if(questionList === null){
-        return (
-            <div>Loading...</div>
-        )
-    } else {   
+      function isLoaded(){
+        return questionList === null || questionList.length === 0;
+      }
+
         return (
             <div>
                 <Link to="/QuestionForm">
                     <button className="admin-newQ-button">Add a new Question</button>
                 </Link>
-                <QuestionsAndAnswers questionData={questionList}/>
+
+                { isLoaded? <p>No questions yet or the questions are loading...</p> : <QuestionsAndAnswers questionData={questionList}/>}
+
             </div>
         )
-    }
 }
 
 export default AdminPage;
