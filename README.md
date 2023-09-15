@@ -148,7 +148,8 @@ The project is under develepment.
 
 The project is under development, but is capable of these feature now:
 1. You can create and delete questions on admin site,
-2. You can watch the questions on adminside and on my carbon footprint side.
+2. You can watch the questions on admin side and on my carbon footprint side,
+3. You can fill out a form about your habbits.
 
 The projects main goal is:
 You can calculate your carbon footprint. The application suggest you how you can decrease your carboon footprint.
