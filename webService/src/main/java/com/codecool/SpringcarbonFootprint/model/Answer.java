@@ -4,6 +4,8 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.Set;
+
 @Getter
 @Setter
 @Builder
@@ -23,5 +25,9 @@ public class Answer {
     @JoinColumn(name = "question_id")
     @JsonBackReference
     private Question question;
+
+    @ManyToMany(mappedBy = "answerSet")
+    @JsonBackReference
+    private Set<QuestionForm> questionFormSet;
 
 }

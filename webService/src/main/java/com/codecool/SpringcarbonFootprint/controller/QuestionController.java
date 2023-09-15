@@ -6,9 +6,14 @@ import com.codecool.SpringcarbonFootprint.model.UpdateQuestionDTO;
 import com.codecool.SpringcarbonFootprint.service.InvalidQuestionException;
 import com.codecool.SpringcarbonFootprint.service.NotFoundQuestionException;
 import com.codecool.SpringcarbonFootprint.service.QuestionService;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.List;
 import java.util.UUID;
 
@@ -16,8 +21,12 @@ import java.util.UUID;
 @RequestMapping("/questions")
 public class QuestionController {
     private final QuestionService questionService;
-    public QuestionController(QuestionService questionService) {
+    private final ObjectMapper objectMapper;
+
+    public QuestionController(QuestionService questionService, ObjectMapper objectMapper) {
         this.questionService = questionService;
+        this.objectMapper =objectMapper;
+        //addQuestionsFromJson();
     }
     @GetMapping(value = "/all")
     public List<Question> getQuestions(){
@@ -52,5 +61,16 @@ public class QuestionController {
     @DeleteMapping(value = "/delete/{id}")
     public void deleteRecipeByID(@PathVariable("id") UUID id) {
         questionService.deleteQuestionByID(id);
+    }
+
+    public List<Question> addQuestionsFromJson() {
+        try {
+            InputStream inputStream = new ClassPathResource("starterQuestions.json").getInputStream();
+            List<NewQuestionDTO> questions = objectMapper.readValue(inputStream, new TypeReference<List<NewQuestionDTO>>() {});
+            List<Question> addedQuestions = questionService.addQuestions(questions);
+            return ResponseEntity.ok(addedQuestions).getBody();
+        } catch (InvalidQuestionException | IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

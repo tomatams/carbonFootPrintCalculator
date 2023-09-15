@@ -1,10 +1,12 @@
 package com.codecool.SpringcarbonFootprint.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.List;
+import java.util.Set;
 import java.util.UUID;
 
 @Getter
@@ -25,4 +27,13 @@ public class Question {
     @JsonManagedReference
     private List<Answer> answerList;
 
+    private String topic;
+    private String hint;
+
+    @Enumerated(EnumType.STRING)
+    private QuestionType questionType;
+
+    @ManyToMany(mappedBy = "questionSet")
+    @JsonBackReference
+    private Set<QuestionForm> questionFormSet;
 }

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import NavigationBar from "./NavigationBar";
 import "./Header.css";
+import Logo from "../Pages/Logo";
 
 const Header = () => {
     const [active, setActive] = useState("inactive");
@@ -10,9 +11,13 @@ const Header = () => {
       };
 
     return (
-      <header>
-            <NavigationBar active={active} handleClick={handleClick} />
-      </header>
+      <div>
+        <Logo />
+        <header>
+              <NavigationBar active={active} handleClick={handleClick} />
+        </header>
+      </div>
+      
     );
   };
 
