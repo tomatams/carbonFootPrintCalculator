@@ -5,6 +5,7 @@ import com.codecool.SpringcarbonFootprint.model.NewQuestionFormDTO;
 import com.codecool.SpringcarbonFootprint.model.Question;
 import com.codecool.SpringcarbonFootprint.model.QuestionForm;
 import com.codecool.SpringcarbonFootprint.service.InvalidQuestionException;
+import com.codecool.SpringcarbonFootprint.service.NotFoundQuestionException;
 import com.codecool.SpringcarbonFootprint.service.QuestionFormService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -29,6 +30,8 @@ public class QuestionFormController {
             return ResponseEntity.ok(questionFormService.addQuestionForm(newQuestionFormDTOs));
         } catch (InvalidQuestionException e) {
             return ResponseEntity.badRequest().build();
+        } catch (NotFoundQuestionException e) {
+            throw new RuntimeException(e);
         }
     }
 }
