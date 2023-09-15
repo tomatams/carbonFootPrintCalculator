@@ -34,7 +34,7 @@ const CarbonFootPrintFormPage = () => {
 
       if(isLoading) {
         return (
-            <p>No questions to answer or the questions are loading...</p>
+            <p>The questions are loading...</p>
         )
       } else {
           return (
@@ -46,7 +46,8 @@ const CarbonFootPrintFormPage = () => {
 }
 
 const postCompletedQuestions = async (data) => {
-    const res = await fetch(backendRoutes.postCompletedQuestions, {
+    console.log(data);
+    const res = await fetch(backendRoutes.postCompletedQuestion, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",

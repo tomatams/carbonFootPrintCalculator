@@ -20,38 +20,45 @@ const FootprintForm = ({questionList, onSubmit}) => {
         }
         handleAnswersToSameQuestion(givenAnswers, question_id, answer_id);
     }
-
-    return (
-        <div>
-                <p>Fill out the Carbon Footprint Form!</p>
-                <div>
-                    <p>There is {questionList.length} questions to answer! You answered {questionNum + 1}</p>
+    if(questionList.length <= 0){
+        return (
+            <p>There is no question to fill out! :(</p>
+        )
+    } else {
+        return (
+            <div>
+                    <p>Fill out the Carbon Footprint Form!</p>
+                    <div>
+                        <p>There is {questionList.length} questions to answer! You answered {questionNum + 1}</p>
+                    </div>
+    
+                    <Question question={questionList[questionNum].question}></Question>
+                    <div className="fpf-container-answer">
+                        {questionList[questionNum].answerList.map((answer)=>(
+                            <Answer  
+                            key = {answer.id} 
+                            index = {answer.id} 
+                            answer= {answer}
+                            onChose={answer_id => handleAnswerClick(questionList[questionNum].id, answer_id)}
+                            ></Answer>
+                        ))}
+                    </div>
+    
+                    <div>
+                      <div className = "fpf-move-button">
+                        {questionNum > 0 && <button onClick={() => setQuestionNum(questionNum - 1)}>Previous</button>}
+                        {questionNum < questionList.length-1 && <button onClick={() => setQuestionNum(questionNum + 1)}>Next</button>}
+                      </div>
+                      <div className = "fpf-submit-button">
+                        {questionNum === questionList.length-1 && <button onClick={handleSubmitAnswer} >Submit the form about Carbon Footprint</button>}
+                      </div>
+                    </div>
+    
                 </div>
+        )
 
-                <Question question={questionList[questionNum].question}></Question>
-                <div className="fpf-container-answer">
-                    {questionList[questionNum].answerList.map((answer)=>(
-                        <Answer  
-                        key = {answer.id} 
-                        index = {answer.id} 
-                        answer= {answer}
-                        onChose={answer_id => handleAnswerClick(questionList[questionNum].id, answer_id)}
-                        ></Answer>
-                    ))}
-                </div>
+    }
 
-                <div>
-                  <div className = "fpf-move-button">
-                    {questionNum > 0 && <button onClick={() => setQuestionNum(questionNum - 1)}>Previous</button>}
-                    {questionNum < questionList.length-1 && <button onClick={() => setQuestionNum(questionNum + 1)}>Next</button>}
-                  </div>
-                  <div className = "fpf-submit-button">
-                    {questionNum === questionList.length-1 && <button onClick={handleSubmitAnswer} >Submit the form about Carbon Footprint</button>}
-                  </div>
-                </div>
-
-            </div>
-    )
 
     function handleAnswersToSameQuestion(givenAnswers, question_id, answer_id) {
         const includesQuestionId = givenAnswers.some(obj => obj.question_id === question_id);

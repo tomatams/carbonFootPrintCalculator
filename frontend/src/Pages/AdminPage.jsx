@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import backendRoutes from "../api/backendRoutes";
 import FetchQuestionData from "../api/useFetchQuestion";
 import QuestionsAndAnswers from "../Components/Admin/QA/QuestionsAndAnswers";
 import "./AdminPage.css";
@@ -21,6 +20,15 @@ const AdminPage = () => {
       if(isLoading){
         return (
             <p>No questions yet or the questions are loading...</p>
+        )
+      } else if (questionList <= 0) {
+        return (
+            <div>
+                <Link to="/QuestionForm">
+                      <button className="admin-newQ-button">Add a new Question</button>
+                  </Link>
+                <p>No questions to modify</p>
+            </div>
         )
       } else {
           return (
