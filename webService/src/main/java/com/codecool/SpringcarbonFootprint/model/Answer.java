@@ -26,7 +26,7 @@ public class Answer {
     @JsonBackReference
     private Question question;
 
-    @ManyToMany(mappedBy = "answerSet")
+    @ManyToMany(mappedBy = "answerSet", cascade = CascadeType.ALL)
     @JsonBackReference
     private Set<QuestionForm> questionFormSet;
 
