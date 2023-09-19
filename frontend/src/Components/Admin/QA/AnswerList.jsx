@@ -19,6 +19,7 @@ const AnswerList = ({addAnswers}) => {
         <div>
             <div>
                 <label>AnswerList</label>
+                <p>You have to add at least one answer!</p>
                 <table>
                     <tbody>
                         {answers.map((answer, index) => (
