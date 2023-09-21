@@ -140,6 +140,10 @@ The project is under develepment.
 7.	Move into the project’s folder /frontend/,
 8.	Run the following command in the terminal :
    ```sh
+   npm install
+   ```
+9.	After that, run the following command in the terminal :
+   ```sh
    npm start
    ```
 9.	This will start the project frontend side, and you can reach in your browser, on the following URL: _http://localhost:3000/_
