@@ -56,7 +56,7 @@ This project is centered around carbon footprint calculating. I learned to use c
 
 <br />
 <br />
-The project is under development.
+The project is under development. This project's main goal is to teach me how to use aws.
 <br />
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -69,6 +69,11 @@ The project is under development.
 <br>
 * View the Prezi of the Demo  [![Prezi][Prezi.js]][Prezi-url]
 * View Demo on Youtube  [![Youtube][Youtube.js]][Youtube-url]
+<br>
+
+2023.09.22 project demo: This Demo is about a status riport, what I have implemented into the project.
+<br>
+* View the Prezi of the Demo  [![GoogleSlides][GoogleSlides.js]][GoogleSlides-url]
 <br>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -221,3 +226,5 @@ In this project, there was 1 junior developer from Codecool: Toma Tamás
 [Spring-url]: https://spring.io
 [Java.js]:https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white
 [Java-url]: https://www.java.com/en/
+[GoogleSlides.js]: https://img.shields.io/badge/Google%20Sheets-34A853?style=for-the-badge&logo=google-sheets&logoColor=white
+[GoogleSlides-url]:https://docs.google.com/presentation/d/1WdcDjAdUanNpiNY-sZ-noTe_MYAe3RRGTNb4s8BF3zs/edit?usp=sharing
