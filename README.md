@@ -146,7 +146,7 @@ The project is under develepment.
    ```sh
    npm start
    ```
-9.	This will start the project frontend side, and you can reach in your browser, on the following URL: _http://localhost:3000/_
+10 .	This will start the project frontend side, and you can reach in your browser, on the following URL: _http://localhost:3000/_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
