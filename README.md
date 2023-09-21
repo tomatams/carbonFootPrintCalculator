@@ -131,7 +131,7 @@ The project is under develepment.
    :white_check_mark: DATABASE_PASSWORD=_your password_<br>
    
 ##### Backend Side
-5. Run the application by the "Run" button in the top right corner or with Shift + F10 shortcut in INTELLIJ IDEA, or You can run a Spring Boot application from your IDE as a simple Java application (ElProyecteGrandeSprint1JavaTomatamsApplication.java),
+5. Run the application by the "Run" button in the top right corner or with Shift + F10 shortcut in INTELLIJ IDEA, or You can run a Spring Boot application from your IDE as a simple Java application (MainClass.java),
 6. This will start the project backend side,
 
 
